@@ -1,26 +1,22 @@
 <html>
     <head>
-        <title>:) BLOG DE H CORTES H</title>
+        <title>:) El blog de H CORTES H ... </title>
     </head>
     <body>
 
-      <div>
-                  <h1><a href="">BLOG DE H CORTES H</a></h1>
-              </div>
-
-              <div>
-                  <p>published: 14.06.2014, 12:14</p>
-                  <h2><a href="">My first post</a></h2>
-                  <p>*xcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcx******</p>
-              </div>
-
-              <div>
-                  <p>published: 14.06.2014, 12:14</p>
-                  <h2><a href="">My second post</a></h2>
-                  <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-              </div>
+    <div>
+        <h1><a href="">BLOG DE H CORTES H</a></h1>
+    </div>
 
 
+{%for post in posts %}
+    <div>
+<p>__ __ __ __ __</p>
+    <h3><a href="">Titulo : {{post.title}}</a></h3>
+    <p>publicado el día: {{ post.published_date}}<p>
+    <p>{{post.text|linebreaks}}</p>
+    </div>
+{% endfor %}
 
 
         <p>-----------------------------------------</p>
