@@ -1,0 +1,59 @@
+h1 a {
+    color: #23961D;
+}
+
+body {
+    padding-left: 35px;
+}
+
+h1 a {
+    color: #183ED6;
+    font-family: 'ORBITRON';
+}
+
+page-header {
+    background-color: #23961D;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #23961D;
+    font-size: 16pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 60px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Monda';
+}
+
+.date {
+    color: #E84F1C;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 50%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #C1C918;
+    float: right;
+    font-size: 36pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 80px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #C1C918;
+}

@@ -1,27 +1,44 @@
+{% load staticfiles %}
 <html>
     <head>
-        <title>:) El blog de H CORTES H ... </title>
-    </head>
-    <body>
+        <link href="http://fonts.googleapis.com/css?family=Anton&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Monda&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Cinzel&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Orbitron&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-    <div>
-        <h1><a href="">BLOG DE H CORTES H</a></h1>
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <title>blog de H CORTES H ... </title>
+    <head>
+
+<body>
+<div>
+    <h1><a href="/">Taller Programando mi primer blog con django</a></h1>
+</div>
+
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>publicado... {{ post.published_date }}</p>
+                    </div>
+                    <h3><a href="">Titulo: {{ post.title }}</a></h3>
+                    <p>{{ post.text|linebreaks }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-
-
-{%for post in posts %}
-    <div>
-<p>__ __ __ __ __</p>
-    <h3><a href="">Titulo : {{post.title}}</a></h3>
-    <p>publicado el día: {{ post.published_date}}<p>
-    <p>{{post.text|linebreaks}}</p>
-    </div>
-{% endfor %}
-
+</div>
 
         <p>-----------------------------------------</p>
         <p>       ¡  Hola !, FUNCIONA               </p>
         <p>-----------------------------------------</p>
 
-    </body>
+</body>
 </html>
